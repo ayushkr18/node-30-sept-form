@@ -1,0 +1,33 @@
+<%- include('./base/header.ejs') %>
+<div class="container">
+  <div class="alert bg-warning my-3">
+    <h4 class="text-center">Login Panel</h4>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col" style="border: 1px solid gray">
+      <form action="/login" method="post">
+        <div>
+          <label class="form-label">User Id:</label>
+          <input type="text" name="email" class="form-control" />
+        </div>
+
+        <div>
+          <label class="form-label">Password:</label>
+          <input type="password" name="password" class="form-control" />
+        </div>
+
+        <input type="submit" value="Login" class="btn btn-warning w-100 my-3" />
+
+        <div>
+          <a href="/signup/window" class="btn btn-success w-100 my-3">Signup</a>
+        </div>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+<%- include('./base/footer.ejs') %>
