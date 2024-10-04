@@ -1,0 +1,32 @@
+<%- include('./base/header.ejs') %>
+<div class="container">
+  <div class="alert bg-success my-3">
+    <h4 class="text-center" style="color: white">User List</h4>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <table class="table text-center">
+            <tr>
+                <th>Image</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Mobile No</th>
+            </tr>
+            <% users.forEach((user)=> { %>
+                <tr>
+                    <td><img src="<%= user.profileImage %>" width="30px" height="30px"></td>
+                    <td><%= user.firstName %></td>
+                    <td><%= user.lastName %></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.mobileNo %></td>
+                </tr>
+
+            <% }) %>
+        </table>
+    </div>
+</div>
+
+<%- include('./base/footer.ejs') %>

@@ -8,6 +8,7 @@ const UserSchema = new Schema({
   email: { type: String },
   password: { type: String },
   mobileNo: { type: String },
+  profileImage: { type: String },
   createdAt: Date,
   updatedAt: Date,
 });
